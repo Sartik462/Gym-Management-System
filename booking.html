@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Equipment Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Equipment Booking</h2>
+
+<form onsubmit="bookEquipment(); return false;">
+  <label>Member Name:</label><br>
+  <input type="text" id="mname" required><br><br>
+
+  <label>Select Equipment:</label><br>
+  <select id="equipment">
+    <option>Treadmill</option>
+    <option>Cycle</option>
+    <option>Dumbbells</option>
+    <option>Bench Press</option>
+  </select><br><br>
+
+  <label>Time Slot:</label><br>
+  <input type="time" id="time" required><br><br>
+
+  <button type="submit">Book</button>
+</form>
+
+<h3>Booking List</h3>
+<table border="1" align="center">
+  <tr>
+    <th>Member</th>
+    <th>Equipment</th>
+    <th>Time</th>
+  </tr>
+  <tbody id="bookingList"></tbody>
+</table>
+
+<script>
+function bookEquipment() {
+  let mname = document.getElementById("mname").value;
+  let equipment = document.getElementById("equipment").value;
+  let time = document.getElementById("time").value;
+
+  let row = "<tr><td>"+mname+"</td><td>"+equipment+"</td><td>"+time+"</td></tr>";
+  document.getElementById("bookingList").innerHTML += row;
+}
+</script>
+
+</body>
+</html>

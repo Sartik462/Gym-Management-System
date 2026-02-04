@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+  background-image: url("bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  margin-top: 20px;
+}
+
+/* Hero section (home page) */
+.hero {
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  width: 220px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Forms */
+form {
+  background: rgba(255,255,255,0.9);
+  width: 320px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+/* Buttons */
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Tables */
+table {
+  background: white;
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #333;
+}
+
+/* Smooth transition for everything */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Navbar hover underline */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background: #00ffcc;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Card hover animation */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Button hover animation */
+button:hover {
+  transform: scale(1.05);
+  letter-spacing: 1px;
+}
+
+/* Form hover glow */
+form:hover {
+  box-shadow: 0 0 25px rgba(0,255,200,0.7);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero, .cards, form, table {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+
+

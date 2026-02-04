@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Member</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Member Registration</h2>
+
+<form onsubmit="addMember(); return false;">
+  <label>Name:</label><br>
+  <input type="text" id="name" required><br><br>
+
+  <label>Age:</label><br>
+  <input type="number" id="age" required><br><br>
+
+  <label>Phone:</label><br>
+  <input type="text" id="phone" required><br><br>
+
+  <label>Membership Type:</label><br>
+  <select id="membership">
+    <option>Monthly</option>
+    <option>Yearly</option>
+  </select><br><br>
+
+  <button type="submit">Register</button>
+</form>
+
+<h3>Registered Members</h3>
+<table border="1" align="center">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Phone</th>
+    <th>Membership</th>
+  </tr>
+  <tbody id="memberList"></tbody>
+</table>
+
+<script>
+function addMember() {
+  let name = document.getElementById("name").value;
+  let age = document.getElementById("age").value;
+  let phone = document.getElementById("phone").value;
+  let membership = document.getElementById("membership").value;
+
+  let row = "<tr><td>"+name+"</td><td>"+age+"</td><td>"+phone+"</td><td>"+membership+"</td></tr>";
+  document.getElementById("memberList").innerHTML += row;
+}
+</script>
+
+
+</body>
+</html>
