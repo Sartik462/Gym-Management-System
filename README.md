@@ -10,7 +10,8 @@ This project allows:
 
 ---
 
-## 📸 Project Preview
+## 📸 Project Preview 
+<img width="1364" height="595" alt="Gym-Management-System-Image" src="https://github.com/user-attachments/assets/f6567d61-2ad3-486e-bec9-449be3d32b40" />
 
 ## 🎥 Project Demo Video
 
